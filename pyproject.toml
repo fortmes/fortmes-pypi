@@ -1,15 +1,14 @@
+[project]
+name = "fortmes.pypi"
+version = "0.1.1"
+license = { file = "LICENSE" }
+description = "Python package for fortmes login"
+readme = "README.md"
+requires-python = ">=3.11"
+
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
-
-[tool]
-# You can specify your project name and version here.
-name = "fortmes-pypi"
-version = "0.1.0"
-description = "Auth0 Device Authorization Flow and Home Assistant Integration for Fortmes"
-authors = ["Bitvilag <info@powerhosting.hu>"]
-license = "MIT"
-readme = "README.md"
 
 [dependencies]
 # Add your project dependencies here
