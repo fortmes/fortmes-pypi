@@ -15,9 +15,6 @@ readme = "README.md"
 # Add your project dependencies here
 httpx = ">=0.18.2"
 
-[build-system]
-requires = ["setuptools>=40.9.0", "wheel"]
-build-backend = "setuptools.build_meta"
 
 
 [project.urls]
