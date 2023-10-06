@@ -4,10 +4,6 @@ homepage = "https://github.com/fortmes/fortmes-pypi"
 repository = "https://github.com/fortmes/fortmes-pypi"
 
 
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
 [tool.poetry]
 name = "fortmes-pypi"
 version = "0.1.0"
