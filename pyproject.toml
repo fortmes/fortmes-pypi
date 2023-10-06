@@ -1,0 +1,13 @@
+[project]
+name = "fortmes.pypi"
+author = "Bitvilag"
+version = "0.0.1"
+license = { file = "LICENSE" }
+description = "Python package for fortmes login"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[project.urls]
+documentation = "https://github.com/fortmes/fortmes-pypi"
+homepage = "https://github.com/fortmes/fortmes-pypi"
+repository = "https://github.com/fortmes/fortmes-pypi"
