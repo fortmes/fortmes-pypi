@@ -21,6 +21,9 @@ jobs:
           --user
       - name: Build a binary wheel and a source tarball
         run: python3 -m build
+      - name: Run tests
+        run: |
+          pytest  # Replace with your test runner (e.g., pytest, unittest)
       - name: Store the distribution packages
         uses: actions/upload-artifact@v3
         with:

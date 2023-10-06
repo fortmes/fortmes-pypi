@@ -1,6 +1,6 @@
 [project]
 name = "fortmes.pypi"
-version = "0.1.2"
+version = "0.1.3"
 license = { file = "LICENSE" }
 description = "Python package for fortmes login"
 readme = "README.md"
