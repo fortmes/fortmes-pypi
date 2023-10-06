@@ -1,12 +1,36 @@
-[project]
-name = "fortmes.pypi"
-version = "0.0.2"
-license = { file = "LICENSE" }
-description = "Python package for fortmes login"
-readme = "README.md"
-requires-python = ">=3.11"
-
 [project.urls]
 documentation = "https://github.com/fortmes/fortmes-pypi"
 homepage = "https://github.com/fortmes/fortmes-pypi"
 repository = "https://github.com/fortmes/fortmes-pypi"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "fortmes-pypi"
+version = "0.1.0"
+description = "Auth0 Device Authorization Flow and Home Assistant Integration for Fortmes"
+authors = ["Bitvilag <info@powerhosting.hu>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+httpx = "^0.18.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ["py37"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["fortmes_pypi"]
