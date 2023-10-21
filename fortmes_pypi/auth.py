@@ -23,7 +23,7 @@ class Auth0Client:
         self.device_code = response_data["device_code"]
         user_code = response_data["user_code"]
         verification_uri = response_data["verification_uri"]
-        return self.device_code, user_code, verification_uri
+        return [self.device_code, user_code, verification_uri]
 
     ## Seperate Class
     async def token_validation(self):
