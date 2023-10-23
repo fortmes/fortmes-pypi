@@ -51,7 +51,7 @@ class Auth0Client:
                             await asyncio.sleep(5)  # Wait and retry
                         else:
                             raise Exception(
-                                f"Authorization error: {error_data['error_description']}"
+                                f"Authorization error: {error_data['error_description'] + " "+ {self.auth0_domain} + " "+ {self.client_id}+ " "+ {self.device_code}}"
                             )
                     else:
                         raise Exception(
