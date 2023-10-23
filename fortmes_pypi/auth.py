@@ -1,8 +1,9 @@
 import aiohttp
 import asyncio
-#import logging
 
-#_LOGGER = logging.getLogger("fortmes_pypi")
+# import logging
+
+# _LOGGER = logging.getLogger("fortmes_pypi")
 
 
 class Auth0Client:
@@ -46,12 +47,12 @@ class Auth0Client:
                         return auth_response["access_token"]
                     elif response.status == 400:
                         error_data = await response.json()
-                        #_LOGGER.error("Module Error: %s", error_data)
+                        # _LOGGER.error("Module Error: %s", error_data)
                         if error_data["error"] == "authorization_pending":
                             await asyncio.sleep(5)  # Wait and retry
                         else:
                             raise Exception(
-                                f"Authorization error: {error_data['error_description'] + " "+ {self.auth0_domain} + " "+ {self.client_id}+ " "+ {self.device_code}}"
+                                f"Authorization error: {error_data['error_description']} {self.auth0_domain} {self.client_id} {self.device_code}"
                             )
                     else:
                         raise Exception(
