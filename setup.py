@@ -1,8 +1,11 @@
 from setuptools import setup, find_packages
-import importlib.metadata
 
-version_string_of_fortmes_pypi = importlib.metadata.version('fortmes.pypi')
-print(version_string_of_fortmes_pypi)
+# import importlib.metadata
+import tomllib
+
+with open("pyproject.toml", "rb") as f:
+    data = tomllib.load(f)
+print(data)
 
 setup(
     name="fortmes-pypi",
