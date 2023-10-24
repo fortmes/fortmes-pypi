@@ -1,9 +1,9 @@
 import aiohttp
 import asyncio
 
-# import logging
+import logging
 
-# _LOGGER = logging.getLogger("fortmes_pypi")
+LOGGER = logging.getLogger(__name__)
 
 
 class Auth0Client:
