@@ -38,11 +38,17 @@ class Auth0Client:
             "device_code": self.device_code,
             "grant_type": "urn:ietf:params:oauth:grant-type:device_code",
         }
-
+        LOGGER.info("The while cycle starts.")
         while True:
-            LOGGER.info("next cycle")
+            LOGGER.info("Next or First cycle.")
             async with aiohttp.ClientSession() as session:
+                LOGGER.info(
+                    f"POST sent to Auth0 service with authorization_endpoint: {authorization_endpoint} and json-data: {data}."
+                )
                 async with session.post(authorization_endpoint, json=data) as response:
+                    LOGGER.info(
+                        f"waiting for response from server. Response is: {response}"
+                    )
                     if response.status == 200:
                         auth_response = await response.json()
                         return auth_response["access_token"]
