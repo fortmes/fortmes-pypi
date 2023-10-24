@@ -13,7 +13,7 @@ build-backend = "setuptools.build_meta"
 [dependencies]
 # Add your project dependencies here
 httpx = ">=0.18.2"
-logging
+logging = ">=0.4.9.6"
 
 
 
