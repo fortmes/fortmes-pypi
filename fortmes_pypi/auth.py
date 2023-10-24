@@ -56,5 +56,5 @@ class Auth0Client:
                             )
                     else:
                         raise Exception(
-                            f"Unexpected response: {response.status} - {await response.text()}"
+                            f"Unexpected response: {response.status} - {await response.text()} {self.auth0_domain} {self.client_id} {self.device_code}"
                         )
