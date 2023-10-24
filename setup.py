@@ -9,7 +9,7 @@ print(data["project"]["version"])
 
 setup(
     name="fortmes-pypi",
-    version="0.1.16",
+    version=data["project"]["version"],
     packages=find_packages(),
     # install_requires=["aiohttp", "asyncio", "logging"],
 )
