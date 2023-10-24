@@ -32,7 +32,7 @@ class Auth0Client:
     ## Seperate Class
     async def token_validation(self):
         # Step 2: Poll for user authentication
-        authorization_endpoint = f"https://{self.auth0_domain}/authorize"
+        authorization_endpoint = f"https://{self.auth0_domain}/oauth/token"
         data = {
             "client_id": self.client_id,
             "device_code": self.device_code,
