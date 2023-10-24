@@ -25,9 +25,9 @@ class Auth0Client:
                 response_data = await response.json()
 
         self.device_code = response_data["device_code"]
-        user_code = response_data["user_code"]
+        self.user_code = response_data["user_code"]
         verification_uri = response_data["verification_uri"]
-        return [self.device_code, user_code, verification_uri]
+        return [self.device_code, self.user_code, verification_uri]
 
     ## Seperate Class
     async def token_validation(self):
@@ -40,6 +40,7 @@ class Auth0Client:
         }
 
         while True:
+            LOGGER.info("next cycle")
             async with aiohttp.ClientSession() as session:
                 async with session.post(authorization_endpoint, json=data) as response:
                     if response.status == 200:
@@ -56,5 +57,5 @@ class Auth0Client:
                             )
                     else:
                         raise Exception(
-                            f"Unexpected response: {response.status} - {await response.text()} {self.auth0_domain} {self.client_id} {self.device_code}"
+                            f"Unexpected response: {response.status} - {await response.text()} {self.auth0_domain} {self.client_id} {self.device_code} {self.user_code}"
                         )
