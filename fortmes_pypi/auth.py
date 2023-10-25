@@ -7,9 +7,15 @@ LOGGER = logging.getLogger(__name__)
 
 
 class Auth0Client:
-    def __init__(self, auth0_domain, client_id):
+    def __init__(
+        self,
+        auth0_domain="dev-fortmes.eu.auth0.com",
+        client_id="WxzBvwjGrWyjhcNs9vSH9dPqhE5mFplS",
+        env="dev",
+    ):
         self.auth0_domain = auth0_domain
         self.client_id = client_id
+        LOGGER.info(f"Currently {env} is running.")
 
     async def device_authorization(self):
         # Step 1: Request device code and user code
